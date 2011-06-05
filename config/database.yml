@@ -1,6 +1,6 @@
 production:
   adapter: sqlite3
-  database: db/goldberg_production.sqlite3
+  database: /home/thredup/apps/ci.thredup.com/shared/db/goldberg_production.sqlite3
   pool: 5
   timeout: 5000
   username: production

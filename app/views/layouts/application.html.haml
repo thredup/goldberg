@@ -18,17 +18,18 @@
       .container
         .header
           %h1
-            %a{:href => '/'} Goldberg
-          %h4 Lightweight Continuous Integration in Ruby
+            %a{:href => '/'} thredUP
+          
 
         .page
           = yield
       .push
-    .footer
-      .logo
-      .message
-        .author
-          %a{:href => 'http://c42.in'} C42 Engineering
-          Open Source
-        .version
-          = "Version #{Version::STRING}"
+    - if false
+      .footer
+        .logo
+        .message
+          .author
+            %a{:href => 'http://c42.in'} C42 Engineering
+            Open Source
+          .version
+            = "Version #{Version::STRING}"

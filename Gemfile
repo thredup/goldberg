@@ -1,5 +1,7 @@
 source 'http://rubygems.org'
 
+gem "rake", "0.8.7"
+
 gem 'rails', '3.0.7'
 
 gem 'sqlite3', '~> 1.3.3', :platforms => :ruby
@@ -7,8 +9,11 @@ gem 'haml', '~> 3.0.25'
 gem 'sass', '~> 3.1.1'
 gem 'commander', '~> 4.0.4'
 gem 'childprocess', '~> 0.1.9'
-gem 'rake', '~> 0.8.7'
 gem 'json', :platforms => [:ruby_18, :jruby]
+
+gem 'capistrano'
+
+gem 'unicorn'
 
 platform :jruby do
   gem 'jdbc-sqlite3', '~> 3.6.0'
@@ -16,6 +21,7 @@ platform :jruby do
 end
 
 group :development, :test do
+  gem 'awesome_print', :require => "ap"
   gem 'ruby-debug', :platforms => [:ruby_18, :jruby]
   gem 'ruby-debug19', :platforms => :ruby_19
   gem 'ffi-ncurses', :platforms => :jruby
