@@ -27,4 +27,8 @@
         Build artefacts
         - @build.artefacts.each do |artefact|
           %li= link_to artefact, "/projects/#{@project.name}/builds/#{@build.number}/artefacts/#{artefact}"
-    %pre= @build.build_log
+    -#%pre= @build.build_log
+  .build-log
+    %iframe{src: project_build_log_path(@project.name,@build), scrolling: "auto", width: "1000px",height: "1000px"}
+      
+    

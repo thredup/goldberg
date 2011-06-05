@@ -13,5 +13,6 @@ Goldberg::Application.routes.draw do
   post '/projects/:project_name/builds' => 'projects#force', :as => :project_force
 
   get '/projects/:project_name/builds/:build_number' => 'builds#show', :as => :project_build
+  get '/projects/:project_name/builds/:build_number/log' => 'builds#log', :as => :project_build_log
   get '/projects/:project_name/builds/:build_number/artefacts/:path' => 'builds#artefact', :constraints => {:path => /.*/}, :as => :project_build_artefact
 end

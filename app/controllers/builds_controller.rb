@@ -36,4 +36,8 @@ class BuildsController < ApplicationController
   def show
     render 'projects/show'
   end
+  
+  def log
+    render :text => @build.build_log, :layout => false
+  end
 end
